@@ -1,0 +1,28 @@
+<?php
+
+namespace App\Http\Controllers;
+
+class ExampleController extends Controller
+{
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        //
+    }
+
+    //
+
+    public function index(){
+
+
+        return [
+            'status' => 0,
+            'data' => [],
+            'meg' => '数据请求成功',
+        ];
+    }
+}
