@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Http\Models\Address;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redis;
 class PostController extends Controller {
@@ -26,12 +27,17 @@ class PostController extends Controller {
     }
 
     public function stroe_into_redis(){
-
         Redis::set('name','xiaoming');
-
         return Redis::get('name');
+    }
+
+    public function testModel(){
+
+
+
+        return Address::simplePaginate(30);
+//        return Address::paginate(30);
 
     }
-    
 
 }

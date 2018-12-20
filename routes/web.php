@@ -24,3 +24,4 @@ $router->get('/post/hello',function(){
 
 $router->get('/post/index','PostController@index');
 $router->get('/post/redis','PostController@stroe_into_redis');
+$router->get('/post/testmodel','PostController@testModel');
