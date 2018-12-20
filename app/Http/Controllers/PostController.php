@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
-
+use Illuminate\Support\Facades\Redis;
 class PostController extends Controller {
 
     public function index(){
@@ -25,6 +25,13 @@ class PostController extends Controller {
         ];
     }
 
+    public function stroe_into_redis(){
+
+        Redis::set('name','xiaoming');
+
+        return Redis::get('name');
+
+    }
     
 
 }

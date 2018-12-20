@@ -81,6 +81,16 @@ $app->singleton(
 // $app->register(App\Providers\AppServiceProvider::class);
 // $app->register(App\Providers\AuthServiceProvider::class);
 // $app->register(App\Providers\EventServiceProvider::class);
+/**
+ *  添加redis 扩展
+ */
+
+$app->register(\Illuminate\Redis\RedisServiceProvider::class);
+$app->withFacades();
+
+// $app->withEloquent();
+//载入 conf/database.php 配置
+$app->configure('database');
 
 /*
 |--------------------------------------------------------------------------
